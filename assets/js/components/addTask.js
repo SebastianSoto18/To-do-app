@@ -18,7 +18,14 @@ export const addTask = (e) => {
     calendar.value='';
     input.value='';
     const dateformat = moment(date).format('DD/MM/YYYY');
-    const taskList = JSON.parse(localStorage.getItem('task') || []);
+
+   
+    try{
+        const taskList = JSON.parse(localStorage.getItem('task') || []);
+    }catch(e){
+        const tasklist =[];
+    }
+    
     
     
     if( value.trim() === '' || date.trim() === '') {
