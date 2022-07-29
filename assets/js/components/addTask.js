@@ -19,11 +19,12 @@ export const addTask = (e) => {
     input.value='';
     const dateformat = moment(date).format('DD/MM/YYYY');
 
+    var tasklist=[];
    
     try{
-        const taskList = JSON.parse(localStorage.getItem('task') || []);
+          tasklist = JSON.parse(localStorage.getItem('task') || []);
     }catch(e){
-        const tasklist =[];
+         tasklist =[];
     }
     
     
@@ -42,9 +43,9 @@ export const addTask = (e) => {
     };
     
 
-    taskList.push(taskObj);
+    tasklist.push(taskObj);
 
-    localStorage.setItem("task",JSON.stringify(taskList));
+    localStorage.setItem("task",JSON.stringify(tasklist));
 
     list.innerHTML="";
     displayTask();

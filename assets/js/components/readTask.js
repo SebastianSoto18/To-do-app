@@ -4,7 +4,7 @@ import dateElement from "./dateElement.js";
 
 export const displayTask = () => {
     
-    const tasklist=[];
+    var tasklist=[];
 
     try{
         tasklist = JSON.parse(localStorage.getItem('task') || []);
