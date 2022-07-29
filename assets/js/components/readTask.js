@@ -3,7 +3,7 @@ import { uniqueDates, orderDates } from "../services/date.js";
 import dateElement from "./dateElement.js";
 
 export const displayTask = () => {
-    const tasklist= JSON.parse(localStorage.getItem('task'));
+    const tasklist= JSON.parse(localStorage.getItem('task') || []);
     const list = document.querySelector('[data-task-list]');
 
     const dates = uniqueDates(tasklist);
