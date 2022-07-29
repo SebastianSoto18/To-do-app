@@ -59,6 +59,7 @@ export const createTask = ({value,dateformat,complete,id}) => {
     const dateElement = document.createElement('span');
         dateElement.innerHTML = dateformat;
     const taskcontainer = document.createElement('div');
+        taskcontainer.classList.add('taskcontainer');
         taskcontainer.appendChild(check);
     const task=document.createElement('li');
         task.classList.add('card');

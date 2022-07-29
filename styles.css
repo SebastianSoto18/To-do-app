@@ -42,11 +42,13 @@ form {
 }
 
 .inputForm {
+  gap:5px;
   border: none;
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
-  width: 35%;
+  width: 30%;
+  min-width: 145px;
 }
 
 .inputForm::placeholder {
@@ -54,16 +56,18 @@ form {
 }
 
 .btnCreate {
-  padding: 10px 15px;
+  padding: 5px 5px;
   background-image: linear-gradient(
     109.6deg,
     rgba(62, 161, 219, 1) 11.2%,
-    rgba(93, 52, 236, 1) 100.2%
+    rgba(93, 52, 236, 1) 11.2%
   );
   border: none;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  width: 20%;
+  min-width: 70px;
 }
 
 .cardsList {
@@ -84,7 +88,9 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-content: center;
+  align-items: center;
   margin: 5px 0px;
   position: relative;
 }
@@ -130,4 +136,52 @@ form {
 .date{
   width: 100%;
   padding: 15px;
+}
+
+.interface{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.fecha{
+  width: 30%;
+  min-width: 145px;
+  height: 38px;
+}
+
+.taskcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 600px){
+  .interface{
+    justify-content: center;
+  }
+
+  .card{
+    justify-content: center;
+    gap:10px;
+  }
+
+}
+
+@media screen and (max-width: 814px){
+  .interface{
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+
+@media screen and (max-width: 1050px){
+  .interface{
+    justify-content: center;
+ 
+  }
 }
