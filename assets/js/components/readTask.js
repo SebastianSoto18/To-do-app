@@ -4,11 +4,12 @@ import dateElement from "./dateElement.js";
 
 export const displayTask = () => {
     
-    const taskList=[];
+    const tasklist=[];
+
     try{
-         taskList = JSON.parse(localStorage.getItem('task') || []);
+        tasklist = JSON.parse(localStorage.getItem('task') || []);
     }catch(e){
-         tasklist =[];
+        tasklist =[];
     }
 
     const list = document.querySelector('[data-task-list]');
