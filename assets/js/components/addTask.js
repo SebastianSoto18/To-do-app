@@ -66,7 +66,6 @@ export const addTask = (e) => {
     
 
 export const createTask = ({value,dateformat,complete,id}) => {
-   
     const check = checkcomplete(id);
 
     if(complete){
@@ -93,6 +92,7 @@ export const createTask = ({value,dateformat,complete,id}) => {
     task.appendChild(dateElement);
     task.appendChild(deletetaskicon(id));
 
+    task.classList.add("animate__animated", "animate__bounceIn");
     return task;
 };
 
