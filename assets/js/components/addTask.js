@@ -30,7 +30,19 @@ export const addTask = (e) => {
     
     
     if( value.trim() === '' || date.trim() === '') {
-        alert('Please fill in all fields');
+        
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debes ingresar una tarea y una fecha',
+            showClass: {
+                  popup: 'animate__animated animate__backInRight'
+                },
+            hideClass: {
+                  popup: 'animate__animated animate__backOutRight'
+                }
+          });
+
         return;
     }
 
